@@ -2,10 +2,5 @@ default:
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      selenium2:
-        capabilities:
-          # See https://github.com/Behat/MinkExtension/pull/311
-          # "null" with "chrome", and "false" with "firefox"
-          marionette: false
-      browser_name: firefox
-      base_url: http://site.local
+      selenium2: ~
+      base_url: https://en.wikipedia.org
