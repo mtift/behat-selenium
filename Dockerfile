@@ -3,19 +3,24 @@ FROM alpine:latest
 # Update and install packages
 RUN apk update
 RUN apk add --no-cache \
+    bash \
+    curl \
+    git \
+    unzip \
     php7 \
+    php7-xml \
+    php7-zip \
+    php7-xmlreader \
+    php7-zlib \
+    php7-opcache \
+    php7-mcrypt \
+    php7-openssl \
     php7-curl \
     php7-json \
     php7-dom \
     php7-phar \
     php7-mbstring \
-    php7-openssl \
-    php7-zlib \
-    curl \
-    wget \
-    zsh \
-    git \
-    sudo
+    php7-ctype \
 RUN rm -fr /var/cache/apk/*
 
 # Install composer.
