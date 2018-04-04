@@ -1,0 +1,52 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 2c424f2..7e661c0 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -3,11 +3,13 @@[m
+ * [Docker Compose](https://docs.docker.com/compose/install/#install-compose)[m
+ * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)[m
+ [m
+[31m-## Features[m
+[31m-* PHP7[m
+[31m-* Composer[m
+[31m-* Behat[m
+[31m-* MinkExtension[m
+[32m+[m[32m## Includes[m[41m [m
+[32m+[m[32m* [PHP7](https://php.net)[m
+[32m+[m[32m* [Composer](https://getcomposer.org/)[m
+[32m+[m[32m* [Behat](http://behat.org)[m
+[32m+[m[32m* [Mink](http://mink.behat.org)[m
+[32m+[m[32m* [MinkExtension](https://github.com/Behat/MinkExtension)[m
+[32m+[m[32m* [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)[m
+ * Selenium ([Standalone Chrome](https://github.com/SeleniumHQ/docker-selenium/tree/master/StandaloneChrome) and [Standalone Firefox](https://github.com/SeleniumHQ/docker-selenium/tree/master/StandaloneFirefox))[m
+ [m
+ ## Installation[m
+[36m@@ -18,14 +20,22 @@[m
+ 1. Start docker: `docker-compose up -d`[m
+ 1. Run all tests: `./run-behat`[m
+ [m
+[32m+[m[32m## Customize[m
+[32m+[m[32m* To test your site, add features in the `tests/features` directory.[m
+[32m+[m[32m* Run `./run-behat -dl` to see a list of available gherkin commands.[m
+[32m+[m[32m* Add custom gherkin commands to `tests/features/bootstrap/FeatureContext.php`.[m
+[32m+[m[32m* Use the @javascript tag to test your javascript code.[m
+[32m+[m[32m* Use the @api tag to test your Drupal code.[m
+[32m+[m
+ ## Related[m
+[31m-* Run the tests for a single feature: `./run-behat features/wikipedia.feature`[m
+[31m-* Show a list of gherkin commands: `./run-behat -dl`[m
+[32m+[m[32m* To run the tests for a single feature: `./run-behat features/drupal.feature`[m
+ * To test a different site, change the "base_url" value in `tests/behat.yml`.[m
+ * Shut down docker: `docker-compose down`[m
+ * To view the HTML report of your tests, visit `http://<your-docker-host-ip>:8000/html_report` (e.g. `http://localhost:8000/html_report`) or open `behat-selenium/tests/html_report/index.html`[m
+ [m
+[31m-## Credits[m
+[31m-This project was inspired by:[m
+[31m-* https://hub.docker.com/r/bergil/docker-behat/[m
+[31m-* https://hub.docker.com/r/docksal/behat/[m
+[32m+[m[32m## Notes[m[41m [m
+[32m+[m[32m* This project was created as a PHP-specific replacement for [Selenium IDE tests](https://www.seleniumhq.org/projects/ide/)[m
+[32m+[m[32m* Tests that require[m
+[32m+[m[32m* This project was inspired by:[m
+[32m+[m[32m    * https://hub.docker.com/r/bergil/docker-behat/[m
+[32m+[m[32m    * https://hub.docker.com/r/docksal/behat/[m
