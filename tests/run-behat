@@ -3,4 +3,4 @@
 set -e  # Fail on errors
 
 # Run behat commands in a running behat container
-docker exec $(docker-compose ps -q behat) behat --colors --format=pretty --out=std --format=html --out=html_report "$@"
+docker exec $(docker-compose ps -q behat) behat --colors "$@"

@@ -7,8 +7,12 @@
 * Behat
 * MinkExtension
 
-# Usage
+# Installation
 1. `git clone git@github.com:mtift/behat-selenium.git`
 1. `cd behat-selenium`
 1. `docker build -t local-behat-selenium .`
-1. `docker run --rm -v $(pwd):/src local-behat-selenium --colors`
+
+# Usage
+1. `cd tests`
+1. `docker-compose up -d`
+1. `./run-behat features/wikipedia.feature`
