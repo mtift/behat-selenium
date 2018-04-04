@@ -16,3 +16,8 @@
 1. `cd tests`
 1. `docker-compose up -d`
 1. `./run-behat features/wikipedia.feature`
+
+# Credits
+This project was inspired by:
+* https://hub.docker.com/r/bergil/docker-behat/
+* https://hub.docker.com/r/docksal/behat/
