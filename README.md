@@ -8,7 +8,7 @@
 * MinkExtension
 
 # Usage
-```
-$ docker run --rm -v $(pwd):/src mtift/behat-selenium --version
-behat version 3.1.0
-```
+1. `git clone git@github.com:mtift/behat-selenium.git`
+1. `cd behat-selenium`
+1. `docker build -t local-behat-selenium .`
+1. `docker run --rm -v $(pwd):/src local-behat-selenium --colors`
