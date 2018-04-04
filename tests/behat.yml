@@ -26,7 +26,7 @@ default:
       selenium2:
         wd_host: http://browser:4444/wd/hub
         capabilities: { "browser": "chrome", "version": "*" }
-      base_url: https://en.wikipedia.org
+      base_url: http://louie.newsbank.com/apps/uicomp-nbcore-qc
 
     Drupal\DrupalExtension:
       # Map template regions.
