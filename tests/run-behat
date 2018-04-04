@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-set -e  # Fail on errors
+# Fail on errors
+set -e
 
 # Run behat commands in a running behat container
-# Have to use `docker exec`, since `docker-compose run` won't work on Windows (TODO: is this still true?)
 docker exec $(docker-compose ps -q behat) behat --colors --format=pretty --out=std --format=html --out=html_report "$@"
-
-echo "To view HTML report visit http://<your-docker-host-ip>:8000/html_report (e.g. http://localhost:8000/html_report) or behat-selenium/tests/html_report.index.html"
