@@ -4,15 +4,19 @@ FROM alpine:latest
 RUN apk update
 RUN apk add --no-cache \
     php7 \
+    php7-curl \
+    php7-json \
+    php7-dom \
+    php7-phar \
+    php7-mbstring \
+    php7-openssl \
+    php7-zlib \
     curl \
     wget \
     zsh \
     git \
     sudo
-RUN rm -fr /var/cache/apk/* \
-
-# Add symlinks.
-RUN ln -s /usr/bin/php7 /usr/bin/php
+RUN rm -fr /var/cache/apk/*
 
 # Install composer.
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
