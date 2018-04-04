@@ -1,3 +1,4 @@
+@javascript
 Feature: Javascript testing
   As an Internet user
   I should be able to navigate through website pages using Nav buttons
